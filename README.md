@@ -4,7 +4,9 @@
 Just run the file from Release and get access to powershell without AMSI!
 
 
-https://github.com/MzHmO/DebugAmsi/assets/92790655/e56f48e7-074c-47f8-87b1-8aa3cf4b59bb
+
+https://github.com/MzHmO/DebugAmsi/assets/92790655/7417215b-ed0d-47f5-b879-c1f0debc110a
+
 
 
 ## How It Works
