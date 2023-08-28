@@ -123,14 +123,14 @@ int GetModuleSize(HANDLE hProcess, void* baseAddress)
     IMAGE_DOS_HEADER dosHeader;
     if (!ReadProcessMemory(hProcess, baseAddress, &dosHeader, sizeof(dosHeader), nullptr))
     {
-        std::cout << "[-] Failed to read IMAGE_DOS_HEADER" << std::endl;
+        std::cout << h("[-] Failed to read IMAGE_DOS_HEADER") << std::endl;
         return 0;
     }
 
     IMAGE_NT_HEADERS ntHeader;
     if (!ReadProcessMemory(hProcess, reinterpret_cast<std::uint8_t*>(baseAddress) + dosHeader.e_lfanew, &ntHeader, sizeof(ntHeader), nullptr))
     {
-        std::cout << "[-] Failed to read IMAGE_NT_HEADERS" << std::endl;
+        std::cout << h("[-] Failed to read IMAGE_NT_HEADERS") << std::endl;
         return 0;
     }
 
