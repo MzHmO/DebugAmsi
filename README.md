@@ -14,7 +14,7 @@ Once our process becomes a debugger, it can handle the LOAD_DLL_DEBUG_EVENT even
 
 Thus, we can start powershell.exe, then become a debugger for it and intercept an attempt to load amsi.dll . And then patch it at the moment of loading.
 
-The problem is that we may not be able to get to the point where the amsi.dll library is loaded, so in my code, the process starts in a suspended state (at that point, it will only have ntdll.dll in its address space). It then installs the debugger and resumes the main thread of the process, which causes powershell.exe to resume and load the necessary libraries.
+The problem is that we may miss the point of loading amsi.dll into the powershell.exe process, so in my code, the process starts in a suspended state (at that point, it will only have ntdll.dll in its address space). Then installs the debugger and resumes the main thread of the process, which causes powershell.exe to resume and load the necessary libraries.
 ![изображение](https://github.com/MzHmO/DebugAmsi/assets/92790655/1807cea2-e118-45e0-a749-f0cb7c934a09)
 
 ![изображение](https://github.com/MzHmO/DebugAmsi/assets/92790655/5a3ccb31-7c42-4c6b-a254-894559d98421)
