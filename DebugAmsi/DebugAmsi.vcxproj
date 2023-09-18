@@ -131,11 +131,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="DebugAmsi.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="strhide.h" />
-    <ClInclude Include="stuff.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="StrHide.hpp" />
+    <ClInclude Include="DebugAmsi.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
